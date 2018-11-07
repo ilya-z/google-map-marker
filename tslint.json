@@ -1,0 +1,15 @@
+{
+  "member-access": false,
+  "rules": {
+    "ordered-imports": [false],
+    "object-literal-sort-keys": [false],
+    "check-format": [false]
+  },
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js"
+    ]
+  }
+}

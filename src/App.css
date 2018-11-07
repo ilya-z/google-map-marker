@@ -1,0 +1,98 @@
+header, footer {
+  background-color: #222;
+  height: 50px;
+  padding: 10px 20px;
+  color: white;
+}
+
+footer {
+  height: 25px;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.title {
+  font-size: 1.5em;
+  padding: 0;
+  margin: 3px 0 0;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+#gMap {
+  position: absolute !important;
+  top: 50px;
+  right: 0;
+  bottom: 25px;
+  left: 0;
+}
+
+.marker {
+  position: relative;
+  text-align: center;
+  background-color: #222;
+  font-size: 0.9em;
+  color: #e0e0e0;
+  width: 400px;
+  height: 200px;
+  will-change: transform;
+  padding: 10px 100px;
+}
+
+.marker button {
+  margin-top: 5px;
+}
+
+.marker > * {
+  visibility: hidden;
+}
+
+.marker.up {
+  -webkit-clip-path: polygon(200px 200px, 250px 100px, 200px 130px, 200px 130px, 150px 100px);
+  animation: move-up 3s ease-in-out infinite;
+  transition: -webkit-clip-path 0.3s ease, translate 1s ease;
+}
+
+.marker.down {
+  -webkit-clip-path: polygon(200px 0, 250px 100px, 200px 70px, 200px 70px, 150px 100px);
+  animation: move-down 3s ease-in-out infinite;
+  transition: -webkit-clip-path 0.3s ease, translate 1s ease;
+  padding-top: 100px;
+}
+
+.marker.up:hover, .marker.down:hover {
+  animation: none;
+}
+
+.marker.up:hover  > *, .marker.down:hover  > * {
+  visibility: visible;
+}
+
+@keyframes move-up {
+   0% {
+     transform: translateY(0px);
+   }
+   50% {
+     transform: translateY(-20px);
+   }
+   0% {
+     transform: translateY(0px);
+   }
+ }
+
+@keyframes move-down {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  0% {
+    transform: translateY(0px);
+  }
+}
